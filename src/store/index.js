@@ -10,6 +10,11 @@ export default new Vuex.Store({
       state.filter = genreSelection;
       console.log(state.filter + " set to " + genreSelection);
     },
+    createAlbum(state, album) {
+      state.albums.push(album);
+      console.log("createAlbum mutator");
+      console.log("createAlbum mutator just created " + album);
+    },
   },
   actions: {},
   modules: {},

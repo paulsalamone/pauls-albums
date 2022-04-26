@@ -7,7 +7,7 @@
         {{ genre }}
       </option>
     </select>
-    <p>Selected: {{ filter }}</p>
+    <!-- <p>Selected: {{ filter }}</p> -->
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     setFilter() {
-      console.log("filter set");
+      //   console.log("filter set");
       this.$store.commit("setFilter", this.genreSelection);
     },
   },
