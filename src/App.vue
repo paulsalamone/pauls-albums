@@ -1,32 +1,50 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <h1>Paul's LPs</h1>
+    <TopNav />
     <router-view />
   </div>
 </template>
 
+<script>
+import TopNav from "./components/TopNav.vue";
+export default {
+  components: {
+    TopNav,
+  },
+};
+</script>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rubik+Mono+One&display=swap");
+
+body {
+  /* background-color: #e5e5f7; */
+  opacity: 1;
+  background: repeating-linear-gradient(
+    -45deg,
+    #9094d7,
+    #9094d7 2px,
+    #e5e5f7 2px,
+    #e5e5f7 5px
+  );
+  z-index: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: "Cabin", Arial, Helvetica, sans-serif;
+  /* background-color: white; */
 }
 
-nav {
-  padding: 30px;
+h1,
+h2,
+h3 {
+  font-family: "Rubik Mono One", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+h1 {
+  background-color: white;
+  margin: 10px;
+  /* padding: 10px; */
+  font-size: 3rem;
 }
 </style>
