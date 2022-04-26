@@ -4,7 +4,14 @@
     <h6>{{ album.id }}</h6>
     <h2>{{ album.title }}</h2>
     <h3>{{ album.artist }}</h3>
-    <a href="#">read more></a>
+    <!-- <a href="#">read more></a> -->
+    <router-link
+      :to="{ name: 'album-show', params: { id: album.id } }"
+      :album="album"
+      :id="album.id"
+      >read more</router-link
+    >
+
     <AlbumLike />
   </div>
 </template>
@@ -24,12 +31,11 @@ export default {
 
 <style scoped>
 .card {
-  box-shadow: 2px 2px 10px rgba(255, 0, 0, 0.44),
-    -2px -2px 10px rgba(0, 0, 200, 0.44);
   padding: 20px;
   background-color: white;
 }
 img {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  box-shadow: 0 0 5px grey;
 }
 </style>

@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AddView from "../views/AddView.vue";
+import AlbumView from "../views/AlbumView.vue";
 
 Vue.use(VueRouter);
 
@@ -14,10 +15,13 @@ const routes = [
   {
     path: "/add",
     name: "add",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: AddView,
+  },
+  {
+    path: "/album/:id",
+    name: "album-show",
+    component: AlbumView,
+    props: true,
   },
 ];
 
